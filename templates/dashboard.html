@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Traffic Flow Optimization
+    </title>
+
+    <link rel="stylesheet" href="{{ url_for(
+            'static',
+            filename='style.css'
+        ) }}">
+
+</head>
+
+
+<body>
+
+
+    <header class="header">
+
+        <div>
+
+            <h1>
+                🚦 AI Traffic Flow Optimization
+            </h1>
+
+            <p>
+                Intelligent Traffic Monitoring
+                & Signal Optimization
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <section class="controls">
+
+            <button id="analyzeButton" onclick="analyzeTraffic()">
+
+                Analyze Traffic
+
+            </button>
+
+        </section>
+
+
+        <section class="cards">
+
+
+            <div class="card">
+
+                <span>
+                    🚗 Vehicles
+                </span>
+
+                <strong id="vehicleCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>
+                    🏎 Average Speed
+                </span>
+
+                <strong id="averageSpeed">
+                    0 km/h
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>
+                    🚧 Congestion
+                </span>
+
+                <strong id="congestion">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>
+                    🚦 Green Time
+                </span>
+
+                <strong id="greenTime">
+                    0 sec
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="panel">
+
+            <h2>
+                Vehicle Distribution
+            </h2>
+
+            <div id="vehicleTypes">
+
+                Waiting for analysis...
+
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <h2>
+                System Status
+            </h2>
+
+            <p id="status">
+
+                System ready.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="{{ url_for(
+        'static',
+        filename='dashboard.js'
+    ) }}"></script>
+
+
+</body>
+
+</html>
